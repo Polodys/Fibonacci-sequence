@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BEE9E8;
+    color: #1B4965;
+}
+
+.container {
+    border: 2px solid #1B4965;
+    border-radius: 10px;
+    background-color: #CAE9FF;    
+    box-shadow: 5px 5px 5px rgba(27, 73, 101, 0.2);
+    max-width: 550px;
+    width: 100%;
+    /* width: 50%; */
+}
+
+h1 {
+    margin: 0.8rem;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.userInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.userInput input {
+    width: 4em;
+    text-align: end;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: #BEE9E8;
+}
+
+.userInput span {
+    font-weight: 600;
+}
+
+button {
+    background-color: #BEE9E8;
+    color: #1B4965;
+    margin: 2rem;
+    padding: 0.7rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #1B4965;
+    color:#BEE9E8;
+    cursor: pointer;
+}
+
+/* Fibonacci sequence display area */
+#divDisplayFibonacciSequence {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: rgba(98, 182, 203, 0.3);
+    /* border-radius: 5px; */
+    transition: background-color 0.3s ease;
+  }
+  
+  li:hover {
+    background-color: #BEE9E8;
+  }
