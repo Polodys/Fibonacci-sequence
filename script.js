@@ -8,19 +8,35 @@ function createSequence(firstNumber, secondNumber, numberOfTerms) {
 }
 
 function displaySequence() {
-  // Getting user input and converting them to integers
-  let firstNumber = parseInt(document.getElementById("firstNumber").value);
-  let secondNumber = parseInt(document.getElementById("secondNumber").value);
-  let numberOfTerms = parseInt(document.getElementById("numberOfTerms").value);
+  // Getting user inputs and converting them to floats (use of parseFloat rather than perseInt, because if the number is not an integer, I want to display a message and not get an automatic integer conversion)
+  let firstNumber = parseFloat(document.getElementById("first-number").value);
+  let secondNumber = parseFloat(document.getElementById("second-number").value);
+  let numberOfTerms = parseFloat(document.getElementById("number-of-terms").value);
+
+  // Delete previous error messages
+  const errorMessageElement = document.getElementById("error-message");
+  errorMessageElement.textContent = '';
+
+  // Data validation
+  if (isNaN(firstNumber) || isNaN(secondNumber) || isNaN(numberOfTerms) 
+    || !Number.isInteger(firstNumber) || !Number.isInteger(secondNumber) || !Number.isInteger(numberOfTerms)) {
+    errorMessageElement.textContent = 'Les valeurs saisies doivent être des nombres entiers.'
+    return;
+  }
+
+  if (numberOfTerms < 3) {
+    errorMessageElement.textContent = 'La suite doit comporter au moins 3 termes.'
+    return;
+  }
 
   // Fibonacci sequence creation
   let sequence = createSequence(firstNumber, secondNumber, numberOfTerms);
 
   // Delete previous content
-  const element = document.getElementById("divDisplayFibonacciSequence");
+  const element = document.getElementById("div-display-fibonacci-sequence");
   element.innerHTML = "";
 
-  // Display the Fibonacci sequence for the first n terms
+  // Display the Fibonacci sequence
   const ulElement = document.createElement("ul");
   element.appendChild(ulElement);
   sequence.forEach((number, index) => {

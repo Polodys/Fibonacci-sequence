@@ -12,29 +12,34 @@
       <h1>Suite de Fibonacci généralisée</h1>
       <p>Saisir des nombres entiers dans les champs ci-dessous</p>
 
-      <div class="userInputsContainer">
-        <div class="userInput">
-          <label for="firstNumber"
+      <div class="user-inputs-ontainer">
+        <div class="user-input">
+          <label for="first-number"
             ><span>Premier terme</span> de la suite :</label
           >
-          <input type="number" id="firstNumber" min="0" step="1" value="0" />
+          <input type="number" id="first-number" min="0" step="1" value="0" />
         </div>
-        <div class="userInput">
-          <label for="secondNumber"
+        <div class="user-input">
+          <label for="second-number"
             ><span>Deuxième terme</span> de la suite :</label
           >
-          <input type="number" id="secondNumber" min="0" step="1" value="1" />
+          <input type="number" id="second-number" min="0" step="1" value="1" />
         </div>
-        <div class="userInput">
-          <label for="numberOfTerms"
+        <div class="user-input">
+          <label for="number-of-terms"
             ><span>Nombre de termes</span> de la suite :</label
           >
-          <input type="number" id="numberOfTerms" min="3" step="1" value="10" />
+          <input type="number" id="number-of-terms" min="3" step="1" value="10" />
         </div>
       </div>
+
+      <!-- area for displaying error messages -->
+      <p id="error-message"></p>
+
       <button type="button" onclick="displaySequence()">Créer la suite</button>
 
-      <div id="divDisplayFibonacciSequence"></div>
+      <!-- area for displaying the Fibonacci sequence -->
+      <div id="div-display-fibonacci-sequence"></div>
     </div>
 
     <script src="script.js"></script>
